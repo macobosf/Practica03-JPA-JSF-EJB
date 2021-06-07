@@ -12,7 +12,7 @@ import ec.edu.ups.entities.BillHead;
 @Stateless
 public class BillHeadFacade extends AbstractFacade<BillHead> {
 
-	@PersistenceContext(unitName = "PracticaDeLaboratorio03-EJB-JSF-JPA")
+	@PersistenceContext(unitName = "Factura")
 	private EntityManager em;
 	
     public BillHeadFacade() {

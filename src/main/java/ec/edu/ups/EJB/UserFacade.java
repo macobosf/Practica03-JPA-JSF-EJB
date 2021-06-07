@@ -13,7 +13,7 @@ import ec.edu.ups.entities.User;
 @Stateless
 public class UserFacade extends AbstractFacade<User>{
 
-	@PersistenceContext(unitName = "PracticaDeLaboratorio03-EJB-JSF-JPA")
+	@PersistenceContext(unitName = "Factura")
     private EntityManager em;
 	
 	public UserFacade() {

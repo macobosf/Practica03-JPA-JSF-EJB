@@ -10,7 +10,7 @@ import ec.edu.ups.entidades.Bodega;
 @Stateless
 public class BodegaFacade extends AbstractFacade<Bodega> {
 
-    @PersistenceContext(unitName = "PracticaDeLaboratorio03-EJB-JSF-JPA")
+    @PersistenceContext(unitName = "Factura")
     private EntityManager em;
 
     public BodegaFacade() {

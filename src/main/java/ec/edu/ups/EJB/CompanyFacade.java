@@ -12,7 +12,7 @@ import ec.edu.ups.entities.Company;
 @Stateless
 public class CompanyFacade extends AbstractFacade<Company>{
 
-	@PersistenceContext(unitName = "PracticaDeLaboratorio03-EJB-JSF-JPA")
+	@PersistenceContext(unitName = "Factura")
 	private EntityManager em;
 	
 	public CompanyFacade() {

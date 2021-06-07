@@ -11,7 +11,7 @@ import ec.edu.ups.entidades.Producto;
 
 @Stateless
 public class ProductoFacade extends AbstractFacade<Producto> {
-	@PersistenceContext(unitName = "PracticaDeLaboratorio03-EJB-JSF-JPA")
+	@PersistenceContext(unitName = "Factura")
     private EntityManager em;
 
     public ProductoFacade() {

@@ -11,7 +11,7 @@ import ec.edu.ups.entities.City;
 @Stateless
 public class CityFacade extends AbstractFacade<City> {
 
-    @PersistenceContext(unitName = "PracticaDeLaboratorio03-EJB-JSF-JPA")
+    @PersistenceContext(unitName = "Factura")
     private EntityManager em;
     
 	
