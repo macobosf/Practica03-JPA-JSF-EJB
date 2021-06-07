@@ -4,40 +4,40 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
 
 /**
- * Entity implementation class for Entity: Ciudad
+ * Entity implementation class for Entity: Categoria
  *
  */
 @Entity
-public class Ciudad implements Serializable {
 
+public class Categoria implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	int id;
-	String nombre;
+	private int id;
+	private String nombre;
+
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "categoria")
+	private List<Producto> productos=new ArrayList<Producto>();
 	
-	@ManyToOne
-	@JoinColumn
-	private Provincia provincia;
-	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "ciudad")
-	private List<Bodega> bodegas = new ArrayList<Bodega>();
-	
-	public Ciudad(int id, String nombre, Provincia provincia) {
+	public Categoria(int id, String nombre) {
 		this.setId(id);
 		this.setNombre(nombre);
-		this.setProvincia(provincia);
 	}
 
-	public Ciudad() {
+	public Categoria() {
 		super();
 	}
-	
+   
 	public int getId() {
 		return id;
 	}
@@ -54,25 +54,18 @@ public class Ciudad implements Serializable {
 		this.nombre = nombre;
 	}
 
-	public Provincia getProvincia() {
-		return provincia;
-	}
-	public void setProvincia(Provincia provincia) {
-		this.provincia = provincia;
+	public List<Producto> getProductos() {
+		return productos;
 	}
 
-	public List<Bodega> getBodegas() {
-		return bodegas;
+	public void setProductos(List<Producto> productos) {
+		this.productos = productos;
 	}
 	
-	public void setBodegas(List<Bodega> bodegas) {
-		this.bodegas = bodegas;
+	public void addProductos(Producto productos) {
+		this.productos.add(productos);
 	}
-
-	public void addBodegas(Bodega bodegas) {
-		this.bodegas.add(bodegas);
-	}
-
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -89,10 +82,10 @@ public class Ciudad implements Serializable {
 		    return false;
 		if (getClass() != obj.getClass())
 		    return false;
-		Ciudad other = (Ciudad) obj;
+		Categoria other = (Categoria) obj;
 		if (id != other.id)
 		    return false;
 		return true;
 	}
-   
+	
 }

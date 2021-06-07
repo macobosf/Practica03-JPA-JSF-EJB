@@ -4,5 +4,6 @@
 		<class>ec.edu.ups.entidades.Bodega</class>
 		<class>ec.edu.ups.entidades.Ciudad</class>
 		<class>ec.edu.ups.entidades.Producto</class>
+		<class>ec.edu.ups.entidades.Categoria</class>
 	</persistence-unit>
 </persistence>
