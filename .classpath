@@ -14,5 +14,6 @@
 	<classpathentry kind="lib" path="C:/Users/Marco/Desktop/Librerias Java/eclipselink.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Marco/Desktop/Librerias Java/jakarta.persistence-api-2.2.3.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Marco/Desktop/Librerias Java/mysql-connector-java-8.0.24.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Marco/Desktop/Librerias Java/primefaces-6.1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
